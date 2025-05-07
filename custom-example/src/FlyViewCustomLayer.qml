@@ -255,4 +255,27 @@ Item {
             anchors.centerIn:   parent
         }
     }
+
+    // 新增代码
+    Rectangle {
+        id: headingRectangle
+        width: 100
+        height: 100
+        color: "black"
+        radius: 50
+        anchors.centerIn: parent
+
+        Component.onCompleted: {
+            if (parent) {
+                console.log("Heading Rectangle's parent is: ", parent);
+                console.log("Parent's type: ", parent.constructor.name);
+                console.log("Parent's width: ", parent.width); // 输出父控件的宽度
+                console.log("Parent's height: ", parent.height); // 输出父控件的高度
+            } else {
+                console.log("No parent found for Heading Rectangle.");
+            }
+        }
+
+    }
+
 }

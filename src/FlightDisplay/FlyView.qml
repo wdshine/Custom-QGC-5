@@ -135,6 +135,15 @@ Item {
             visible:                !QGroundControl.videoManager.fullScreen
             utmspActTrigger:        utmspSendActTrigger
             isViewer3DOpen:         viewer3DWindow.isOpen
+
+            // 调试信息
+            // Component.onCompleted: {
+            //     console.log("FlyViewWidgetLayer created!");
+            //     console.log("FlyViewWidgetLayer parent: ", parent);
+            //     console.log("FlyViewWidgetLayer visibility: ", visible);
+            //     console.log("FlyViewWidgetLayer anchors: ", anchors);
+            //     console.log("FlyViewWidgetLayer width: ", width, " height: ", height);
+            // }
         }
 
         FlyViewCustomLayer {
@@ -144,6 +153,15 @@ Item {
             parentToolInsets:   widgetLayer.totalToolInsets
             mapControl:         _mapControl
             visible:            !QGroundControl.videoManager.fullScreen
+
+            // 调试信息
+            // Component.onCompleted: {
+            //     console.log("FlyViewCustomLayer created!");
+            //     console.log("FlyViewCustomLayer parent: ", parent);
+            //     console.log("FlyViewCustomLayer visibility: ", visible);
+            //     console.log("FlyViewCustomLayer anchors: ", anchors);
+            //     console.log("FlyViewCustomLayer width: ", width, " height: ", height);
+            // }
         }
 
         // Development tool for visualizing the insets for a paticular layer, show if needed
